@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<h:head>
+		<title>Hello PrettyFaces</title>
+	</h:head>
+	
+	<h:body>
+  
+      <h1>Hello World!</h1>
+
+      <h:messages/>
+      
+      <h:form id="enumForm">
+      
+        <h:selectOneMenu id="level" value="#{enumTestBean.level}" label="Level">
+          <f:selectItem itemValue="#{null}" itemLabel="- none -"/>
+          <f:selectItem itemValue="HIGH"    itemLabel="High"/>
+          <f:selectItem itemValue="MEDIUM"  itemLabel="Medium"/>
+          <f:selectItem itemValue="LOW"     itemLabel="Level"/>
+        </h:selectOneMenu>
+        
+        <h:commandButton action="#{enumTestBean.action}" value="Go"/>
+      
+      </h:form>
+      
+	</h:body>
+	
+</html>
