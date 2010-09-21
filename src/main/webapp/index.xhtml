@@ -5,25 +5,27 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 	
 	<h:head>
-		<title>Hello PrettyFaces</title>
+		<title>Hello MyFaces!</title>
 	</h:head>
 	
 	<h:body>
   
-      <h1>Hello World!</h1>
+      <h1>Hello MyFaces!</h1>
+      
+      <p>Try submitting the form wih "Unknown" selected!</p>
 
       <h:messages/>
       
-      <h:form id="enumForm">
+      <h:form id="levelForm">
       
-        <h:selectOneMenu id="level" value="#{enumTestBean.level}" label="Level">
-          <f:selectItem itemValue="#{null}" itemLabel="- none -"/>
+        <h:selectOneMenu id="level" value="#{testBean.level}" label="Level">
+          <f:selectItem itemValue="#{null}" itemLabel="Unknown"/>
           <f:selectItem itemValue="HIGH"    itemLabel="High"/>
           <f:selectItem itemValue="MEDIUM"  itemLabel="Medium"/>
           <f:selectItem itemValue="LOW"     itemLabel="Level"/>
         </h:selectOneMenu>
         
-        <h:commandButton action="#{enumTestBean.action}" value="Go"/>
+        <h:commandButton action="#{testBean.action}" value="Go"/>
       
       </h:form>
       
