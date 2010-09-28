@@ -1,3 +1,3 @@
 <%
-  response.sendRedirect(request.getContextPath() + "/index.jsf");
+  response.sendRedirect(request.getContextPath() + "/page.jsf");
 %>
