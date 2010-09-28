@@ -1,16 +1,27 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-
-<ui:composition template="/template.xhtml"
-  xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:ui="http://java.sun.com/jsf/facelets">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html">
   
-  <!-- This title is NOT inserted into header.xhtml!!!! -->
-  <ui:define name="title">
-    Correct Title
-  </ui:define>
-
-  <ui:define name="content">
-    Correct Content
-  </ui:define>
+  <body>
   
-</ui:composition>
+    <h:messages/>
+  
+    <h:form>
+
+      <p>
+        <h:commandLink action="#{actionBean.tellYourName('Christian')}" 
+            value="My name is Christian"/>
+      </p>
+      
+      <p>
+        <h:commandLink action="#{actionBean.tellYourAge(29)}" 
+            value="My age is 29"/>
+      </p>
+
+    </h:form>
+
+  </body>
+
+</html>
