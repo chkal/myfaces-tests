@@ -1,5 +1,8 @@
 package de.chkal.myfaces;
 
+import java.util.Arrays;
+import java.util.List;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -9,6 +12,26 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public class ActionBean
 {
+
+    private final List<Item> items;
+    
+    public ActionBean()
+    {
+        items = Arrays.asList(
+                new Item("Item1"),
+                new Item("Item2"),
+                new Item("Item3")
+        );
+    }
+    
+    public String selectItem(Item selectedItem) {
+
+        System.out.println("Your selected item is: "+selectedItem);
+        FacesContext.getCurrentInstance().addMessage(null, 
+                new FacesMessage("Your selected item is: "+selectedItem));
+        return null;
+        
+    }
     
     public String tellYourName(String name) {
         
@@ -27,6 +50,11 @@ public class ActionBean
         FacesContext.getCurrentInstance().addMessage(null, 
                 new FacesMessage("Your age is: "+age));
         return null;
+    }
+
+    public List<Item> getItems()
+    {
+        return items;
     }
 
     

@@ -11,10 +11,10 @@
   <properties>
   
     <!-- Doesn't work -->
-<!--    <myfaces.version>2.0.2</myfaces.version>-->
+    <myfaces.version>2.0.2</myfaces.version>
     
   	<!-- Works -->
-     <myfaces.version>2.0.1</myfaces.version> 
+<!--     <myfaces.version>2.0.1</myfaces.version> -->
 
     <!-- Works! -->
     <jsfri.version>2.0.4-b03</jsfri.version>
